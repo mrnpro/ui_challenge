@@ -13,6 +13,14 @@ class Assets {
   /// assets/pictures/plant3.png
   static const String assetsPicturesPlant3 = "assets/pictures/plant3.png";
 
+  /// Assets for assetsPicturesPlant4
+  /// assets/pictures/plant4.png
+  static const String assetsPicturesPlant4 = "assets/pictures/plant4.png";
+
+  /// Assets for assetsPicturesUserAvatar
+  /// assets/pictures/user_avatar.png
+  static const String assetsPicturesUserAvatar = "assets/pictures/user_avatar.png";
+
   /// Assets for assetsSvgBagFillIcon
   /// assets/svg/bag_fill_icon.svg
   static const String assetsSvgBagFillIcon = "assets/svg/bag_fill_icon.svg";
