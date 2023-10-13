@@ -18,7 +18,7 @@ final onboardingList = <OnboardingModel>[
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text.rich(TextSpan(
-            style: poppinsStyle.copyWith(
+            style: TextStyle(
               fontSize: 40.sp,
             ),
             children: const [
@@ -35,7 +35,7 @@ final onboardingList = <OnboardingModel>[
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text.rich(TextSpan(
-            style: poppinsStyle.copyWith(
+            style: TextStyle(
               fontSize: 40.sp,
             ),
             children: const [
@@ -52,7 +52,7 @@ final onboardingList = <OnboardingModel>[
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text.rich(TextSpan(
-            style: poppinsStyle.copyWith(
+            style: TextStyle(
               fontSize: 40.sp,
             ),
             children: const [
