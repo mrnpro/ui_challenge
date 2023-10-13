@@ -19,9 +19,6 @@ class ScrollablePage extends StatelessWidget {
           height: 391.h,
           fit: BoxFit.fitHeight,
         ),
-        SizedBox(
-          height: 29.h,
-        ),
       ],
     );
   }

@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:plant_app/config/palette.dart';
-import 'package:plant_app/core/constants/assets.dart';
 import 'package:plant_app/presentation/screens/onboardingScreen/onboarding_list.dart';
 
-import '../../../config/Theme/text_styles.dart';
 import 'components/scrollable_page.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
@@ -33,17 +31,16 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
         child: SizedBox(
           height: size.height,
           width: size.width,
-          child: Column(
-            children: [
-              _skip(),
-              _scrollable(),
-
-              _dots(),
-              _subtitle(),
-
-              // circle button
-              _nextButton()
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _skip(),
+                _scrollable(),
+                _dots(),
+                _subtitle(),
+                _nextButton()
+              ],
+            ),
           ),
         ),
       ),
@@ -73,32 +70,37 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     return Column(
       children: [
         SizedBox(
-          height: 56.h,
+          height: 45.h,
         ),
         onboardingList[currentPageIndex].title,
         SizedBox(
-          height: 47.h,
+          height: 45.h,
         ),
       ],
     );
   }
 
-  Row _dots() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+  _dots() {
+    return Column(
       children: [
         SizedBox(
-          height: 57.h,
+          height: 29.h,
         ),
-        buildDot(index: 0),
-        buildDot(index: 1),
-        buildDot(index: 2),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buildDot(index: 0),
+            buildDot(index: 1),
+            buildDot(index: 2),
+          ],
+        ),
       ],
     );
   }
 
-  Expanded _scrollable() {
-    return Expanded(
+  _scrollable() {
+    return SizedBox(
+      height: 391.h,
       child: PageView.builder(
         onPageChanged: (value) {
           setState(() {
@@ -135,6 +137,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
   AnimatedContainer buildDot({required int index}) {
     return AnimatedContainer(
+      curve: Curves.easeIn,
       duration: const Duration(milliseconds: 300),
       margin: const EdgeInsets.only(right: 5),
       height: 8.h,
