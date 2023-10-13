@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:plant_app/config/RouterConfig/route_names.dart';
 import 'package:plant_app/config/palette.dart';
-import 'package:plant_app/presentation/screens/onboardingScreen/onboarding_list.dart';
+import 'package:plant_app/presentation/screens/OnboardingScreen/onboarding_list.dart';
 
 import 'components/scrollable_page.dart';
 
@@ -27,20 +29,24 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return Scaffold(
-      body: SafeArea(
-        child: SizedBox(
-          height: size.height,
-          width: size.width,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _skip(),
-                _scrollable(),
-                _dots(),
-                _subtitle(),
-                _nextButton()
-              ],
-            ),
+      body: _body(size),
+    );
+  }
+
+  SafeArea _body(Size size) {
+    return SafeArea(
+      child: SizedBox(
+        height: size.height,
+        width: size.width,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              _skip(),
+              _scrollable(),
+              _dots(),
+              _subtitle(),
+              _nextButton()
+            ],
           ),
         ),
       ),
@@ -50,6 +56,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   TextButton _nextButton() {
     return TextButton(
       onPressed: () {
+        if (currentPageIndex >= 2) {
+          context.push(RouteNames.searchScreen);
+        }
         int nextPage = currentPageIndex + 1;
         _pageController.animateToPage(nextPage,
             duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
