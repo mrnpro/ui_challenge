@@ -34,13 +34,13 @@ final plantList = <PlantModel>[
       name: "Calla lily",
       subTitle: "green",
       price: "price",
-      image: Assets.assetsPicturesPlant4),
+      image: Assets.assetsPicturesPlant5),
   PlantModel(
       id: "4",
       name: "Begonia",
       subTitle: "green",
       price: "price",
-      image: Assets.assetsPicturesPlant1),
+      image: Assets.assetsPicturesPlant2),
   PlantModel(
       id: "5",
       name: "Snake Plants",
@@ -52,17 +52,17 @@ final plantList = <PlantModel>[
       name: "",
       subTitle: "subTitle",
       price: "price",
-      image: Assets.assetsPicturesPlant2),
+      image: Assets.assetsPicturesPlant4),
   PlantModel(
       id: "7",
       name: "Christmas cactus",
       subTitle: "cactus",
       price: "price",
-      image: Assets.assetsPicturesPlant1),
+      image: Assets.assetsPicturesPlant5),
   PlantModel(
       id: "8",
       name: "African violet",
       subTitle: "green",
       price: "price",
-      image: Assets.assetsPicturesPlant1),
+      image: Assets.assetsPicturesPlant6),
 ];
