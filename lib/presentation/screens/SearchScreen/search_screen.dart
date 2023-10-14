@@ -76,9 +76,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
         ),
-        child: const Text(
+        child: Text(
           "Found\n10 Results",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.sp),
         ),
       ),
     );
@@ -127,8 +127,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 10,
+              SizedBox(
+                width: 10.w,
               ),
               TextButton(
                 style: TextButton.styleFrom(
@@ -136,11 +136,12 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(13.0)), //
                     backgroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 4, vertical: 12)),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 4.w, vertical: 12.h)),
                 onPressed: () {},
                 child: SvgPicture.asset(
                   Assets.assetsSvgFilterIcon,
+                  height: 25.h,
                   color: Colors.black,
                 ),
               )

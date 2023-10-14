@@ -16,7 +16,7 @@ class ScrollablePage extends StatelessWidget {
         Image.asset(
           image,
           width: 322.w,
-          height: 391.h,
+          height: 391.w,
           fit: BoxFit.fitHeight,
         ),
       ],

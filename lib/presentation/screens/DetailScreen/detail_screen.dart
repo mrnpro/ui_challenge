@@ -34,18 +34,14 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
       width: size.width,
       child: SafeArea(
           bottom: false,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _appBar(context),
-                _plantDisplay(size),
-                _plantTitleDescription(),
-                SizedBox(
-                  height: 100.h,
-                ),
-                _infoBox(size)
-              ],
-            ),
+          child: Column(
+            children: [
+              _appBar(context),
+              _plantDisplay(size),
+              _plantTitleDescription(),
+              const Spacer(),
+              _infoBox(size)
+            ],
           )),
     );
   }
@@ -194,8 +190,8 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
       tag: widget.plant.id,
       child: Image.asset(
         widget.plant.image,
-        width: 322,
-        height: 391,
+        width: 322.w,
+        height: 391.h,
       ),
     );
   }
