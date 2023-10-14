@@ -29,6 +29,10 @@ class Assets {
   /// assets/svg/filter_icon.svg
   static const String assetsSvgFilterIcon = "assets/svg/filter_icon.svg";
 
+  /// Assets for assetsSvgHeightIcon
+  /// assets/svg/height_icon.svg
+  static const String assetsSvgHeightIcon = "assets/svg/height_icon.svg";
+
   /// Assets for assetsSvgPotIcon
   /// assets/svg/pot_icon.svg
   static const String assetsSvgPotIcon = "assets/svg/pot_icon.svg";
