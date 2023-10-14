@@ -42,9 +42,4 @@ flutter pub get
 ```
 flutter run
 ```
-
-<<<<<<< Updated upstream
  
-=======
- 
->>>>>>> Stashed changes
