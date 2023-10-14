@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:plant_app/config/RouterConfig/route_names.dart';
 import 'package:plant_app/config/Theme/text_styles.dart';
 import 'package:plant_app/config/palette.dart';
 import 'package:plant_app/core/constants/assets.dart';
@@ -57,6 +58,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
           return _foundText();
         }
         return PlantItem(
+          onPressed: () {
+            context.push(RouteNames.detailScreen, extra: plantList[index]);
+          },
           plant: plantList[index],
         );
       },
@@ -108,15 +112,17 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                     borderRadius: BorderRadius.circular(13),
                     color: Colors.white),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SvgPicture.asset(Assets.assetsSvgSearchLightIcon),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const Text("Search plants",
-                          style: TextStyle(fontSize: 15, color: Colors.grey))
+                      Expanded(
+                          child: TextFormField(
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Search plants"),
+                      ))
                     ],
                   ),
                 ),
