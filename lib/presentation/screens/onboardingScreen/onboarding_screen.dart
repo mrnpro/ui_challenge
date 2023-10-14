@@ -132,7 +132,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           alignment: Alignment.centerRight,
           child: TextButton(
             style: TextButton.styleFrom(foregroundColor: Colors.black),
-            onPressed: () {},
+            onPressed: () {
+              context.push(RouteNames.searchScreen);
+            },
             child: (currentPageIndex != 2)
                 ? Text("Skip",
                     style: TextStyle(
