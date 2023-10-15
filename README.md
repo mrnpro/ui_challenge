@@ -42,4 +42,7 @@ flutter pub get
 ```
 flutter run
 ```
+## Plant Data
+
+The `plant_data.dart` serves as a mock data provider for the plant listings in the app. It contains a list of plants.
  
