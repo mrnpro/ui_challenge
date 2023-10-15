@@ -1,6 +1,6 @@
 # Flutter Plant UI 
 
-![Project UI Video](Screenshots/video.mp4)
+![Project UI Video](demo.mp4)
 ## Introduction
 
 This project is a UI challenge(HeyFlutter Coding Challenge) inspired by the "Plants Shop App UI" concept designed by Madhu Mia. The UI inspiration link can be found on Dribbble at [Plants Shop App UI](https://dribbble.com/shots/16340862-Plants-Shop-App-UI).
@@ -42,7 +42,7 @@ flutter pub get
 ```
 flutter run
 ```
+ 
 ## Plant Data
 
 The `plant_data.dart` serves as a mock data provider for the plant listings in the app. It contains a list of plants.
- 
